@@ -1,0 +1,16 @@
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# OS generated
+.DS_Store
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Other
+*.sql~ 
