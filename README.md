@@ -1,29 +1,37 @@
-# Biblioteca Comunitária - Atividade 4 (SQL)
+# Biblioteca Comunitária - Atividade 4 (SQL) - Amanda Lima da Silva
 
 ## Objetivo
-Repositório com scripts SQL para criação, povoamento e manipulação de dados do sistema Biblioteca Comunitária — Atividade 4 do curso de Modelagem de Banco de Dados.
+Implementar e manipular dados com SQL (DML) em um projeto - mini-mundo Biblioteca Comunitária. O repositório contém scripts DDL e DML prontos para execução em MySQL Workbench.
 
-## Estrutura
-- `sql/01_create_schema_and_tables.sql`  - DDL: criação do schema e tabelas
-- `sql/02_insert_data.sql`              - DML: inserts de exemplo para povoar o banco
-- `sql/03_select_queries.sql`           - SELECTs (JOIN, agregação, WHERE, LIKE)
-- `sql/04_update_commands.sql`          - Exemplos de UPDATE (≥3)
-- `sql/05_delete_commands.sql`          - Exemplos de DELETE (≥3)
-- `sql/06_transactions_and_examples.sql`- Transações e exemplos avançados
+## Estrutura do repositório
+- `sql/01_create_schema_and_tables.sql`  - DDL
+- `sql/02_insert_data.sql`              - INSERTs (povoamento)
+- `sql/03_select_queries.sql`           - SELECTs (5 exemplos: JOIN/WHERE/ORDER BY/GROUP BY/LIMIT)
+- `sql/04_update_commands.sql`          - UPDATEs (4 exemplos)
+- `sql/05_delete_commands.sql`          - DELETEs (4 exemplos)
+- `sql/06_transactions_and_examples.sql`- Transações exemplo
 - `docs/model_logico_summary.md`        - Resumo do modelo lógico
-- `.gitignore`
 
-## Como executar (MySQL Workbench)
-1. No MySQL Workbench, conecte ao servidor MySQL.
-2. Execute na ordem:
+## Como executar (MySQL Workbench) — passo rápido
+1. Baixe/clone o repositório.
+2. No MySQL Workbench, conecte ao servidor local.
+3. Execute na ordem:
    - `sql/01_create_schema_and_tables.sql`
    - `sql/02_insert_data.sql`
-   - Teste as consultas em `sql/03_select_queries.sql`
-   - Teste updates e deletes em ambiente de desenvolvimento (usar `sql/04_*` e `sql/05_*`)
-3. Observações:
-   - Use transações para operações críticas (`START TRANSACTION; ... COMMIT;`)
-   - Se usar PostgreSQL, adapte `AUTO_INCREMENT` → `SERIAL` e funções de data
+   - Teste consultas em `sql/03_select_queries.sql`
+   - Teste updates em `sql/04_update_commands.sql`
+   - Teste deletes em `sql/05_delete_commands.sql`
+   - Teste transação em `sql/06_transactions_and_examples.sql`
+4. Verificações úteis:
+   - `SHOW DATABASES;`
+   - `USE biblioteca_comunitaria;`
+   - `SHOW TABLES;`
+   - `SELECT COUNT(*) FROM usuario;`
 
-## Autor
-Amanda Lima da Silva
+## Entrega
+- Link do repositório (público): https://github.com/AmandaLxs/biblioteca-comunitaria-modelagem
+
+## Observações
+- Os scripts foram projetados para MySQL (Workbench).
+- Se ocorrerem erros por execução duplicada, rode `DROP DATABASE biblioteca_comunitaria;` e reexecute os scripts na ordem.
 
